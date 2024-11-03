@@ -18,8 +18,11 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".", // Add baseUrl to help with resolving paths
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"], // Existing alias for general paths
+      "@/components/*": ["components/*"], // Specific alias for components
+      "@/utils/*": ["utils/*"] // Add more aliases if needed
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
