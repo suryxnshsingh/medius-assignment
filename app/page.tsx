@@ -5,7 +5,7 @@ import Bento from '@/components/Bento'
 import Footer from '@/components/Footer'
 const page = () => {
   return (
-    <div className='montserrat'>
+    <div className='montserrat text-white'>
         <Hero/>
         <Stories/>
         <Bento/>
