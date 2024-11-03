@@ -186,7 +186,7 @@ const CompactCard: React.FC<{ data: CardType }> = ({ data }) => {
 const WideCard: React.FC<{ data: CardType }> = ({ data }) => {
   return (
     <div className="bg-green-50 p-8 rounded-2xl h-full">
-      <div className="flex justify-between flex-row items-start">
+      <div className="flex justify-between flex-col md:flex-row items-start">
         <div className='py-3 px-6'>
           <h3 className="text-2xl font-semibold">
             {data.title}
@@ -195,7 +195,7 @@ const WideCard: React.FC<{ data: CardType }> = ({ data }) => {
             )}
           </h3>
           {data.description && (
-            <p className="text-gray-600 mt-4 max-w-2xl text-md leading-relaxed">
+            <p className="text-gray-600 mt-4 max-w-2xl text-md leading-relaxed hidden md:block">
               {data.description}
             </p>
           )}
@@ -231,13 +231,13 @@ const Bento = () => {
 
   return (
     <div className="w-screen mx-auto px-20 py-8 bg-white text-black">
-        <div className='flex justify-between items-end'>
+        <div className='flex flex-col md:flex-row justify-between md:items-end'>
             <div className="mb-12">
                 <h1 className="text-5xl font-semibold mb-2">Got questions?</h1>
                 <h2 className="text-5xl font-semibold">We've got answers</h2>
             </div>
 
-            <div className="flex gap-4 mb-12 font-semibold">
+            <div className="flex gap-4 mb-12 font-semibold overflow-scroll items-center text-nowrap">
                 {(['Our products', 'Calculators', 'Guides & FAQs'] as TabType[]).map((tab) => (
                 <button
                     key={tab}
@@ -254,7 +254,7 @@ const Bento = () => {
             </div>
         </div>
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {tabsData[activeTab].map((card, index) => (
           <Card key={index} data={card} />
         ))}
