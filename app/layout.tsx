@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Montserrat } from 'next/font/google'
+import ClientLayout from './ClientLayout'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -35,10 +36,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased tracking-tighter`}
       >
-        <Navbar/>
-        {children}
+        <ClientLayout>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );
