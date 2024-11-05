@@ -76,7 +76,23 @@ const Navbar = () => {
             <Link className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-bold leading-normal disabled:pointer-events-none disabled:opacity-50 transition-all ease-in-out duration-200 bg-[#1EE07F] text-black hover:bg-[#004733] hover:text-white py-3 w-auto h-8 px-4 md:px-6 md:h-12" href="#">Continue</Link>
             </li>
             <li>
+                <div className='group min-[520px]:relative'>
+                    <div className='transition-all md:hidden ease-in-out duration-300  text-white hover:text-black rounded-full p-2 md:p-3.5 border-strokeBorder group-hover:bg-white group-hover:border-white'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" >
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
 
+                        <div className='absolute invisible text-2xl  right-6 p-6 group-hover:visible'>
+                            <div className=' bg-white text-black font-semibold gap-2 px-3 py-4 flex flex-col rounded-lg w-80 shadow-md'>
+                                <Link className="bg-emerald-50 py-2 px-4 rounded-lg hover:underline" href="/start">Start</Link>
+                                <Link className="bg-emerald-50 py-2 px-4 rounded-lg hover:underline" href="/about-us">About Us</Link>
+                                <Link className="bg-emerald-50 py-2 px-4 rounded-lg hover:underline" href="/mortgage-calculator">Mortgage Calculator</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </li>
         </ul>
     </nav>
